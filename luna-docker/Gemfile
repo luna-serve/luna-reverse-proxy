@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'awesome_print'
+gem 'colorize'
+gem 'thin'
+gem 'rack-reverse-proxy', path: '/home/luna-docker/rack-reverse-proxy'

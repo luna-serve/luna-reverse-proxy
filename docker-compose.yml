@@ -1,0 +1,6 @@
+web:
+  restart: always
+  build: ./luna-docker
+  ports:
+      - "8080:8080"
+  command: rackup -p 8080 -o 0.0.0.0
