@@ -9,7 +9,7 @@ module Luna
 			#
 
 			def fetch (env)
-				json = RestClient.get $api +'v1/get_domain', { params: { host: env['HTTP_HOST'] } }
+				json = RestClient.get $api +'v1/get_domain', { params: { host: env['HTTP_HOST'] } } rescue nil
 				json = JSON.parse json
 				json[:domain]
 			end
@@ -19,7 +19,7 @@ module Luna
 			# 
 
 			def ping
-				RestClient.get $api +'v1/upstart', { params: { keepalive: 1 } }
+				RestClient.get $api +'v1/upstart', { params: { keepalive: 1 } } rescue nil
 			end
 
 			#
