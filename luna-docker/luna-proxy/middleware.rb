@@ -4,6 +4,7 @@ require 'awesome_print'
 module Luna
 	class Middleware
 	  def initialize(app)
+	  	Luna::Routes.ping
 	    @app = app
 	  end
 
