@@ -5,7 +5,7 @@ module Luna
   class Middleware
     def initialize(app)
       Luna::Routes.ping
-      @app = app
+      @app = app 
     end
 
     #
